@@ -168,4 +168,26 @@ a.navbar-brand{
 }
 .title{
   color: var(--color-black);
+  font-size: 40px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+.card-icon{
+  height: 150px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.card-text{
+  color: var(--color-text-out);
+  font-size: 15px;
+  padding: 0px 30px;
+}
+.card-text p{
+  font-size: 22px;
+  color: var(--color-black);
+  margin-bottom: 10px;
 }
