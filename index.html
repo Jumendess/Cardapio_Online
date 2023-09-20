@@ -377,6 +377,193 @@
       </div>
     </footer>
 
+    <div class="modal-full" id="modal-carrinho">
+      <div class="modal-header">
+        <div class="container">
+          <a href="#" class="btn btn-white btn-sm float-right">Fechar</a href="#">
+            <div class="etapas">
+              <div class="etapa etapa1 ">1</div>
+              <div class="etapa etapa2 ">2</div>
+              <div class="etapa etapa3 ">3</div>
+
+            </div>
+            <p class="title-carrinho mt-4">
+              <b id="ldlTituloEtapa">Seu carrinho</b>
+            </p>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div id="items-carrinho " class="row mr-0 ml-0 ">
+            <div class="col-12 item-carrinho">
+              <div class="img-produto">
+                <img src="img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg" alt="">
+              </div>
+              <div class="dados-produto">
+                <p class="title-produto"></p><b>Nome do produto</b></p>
+                <p class="price-produto"></p><b>R$ 154,90</b></p>
+              </div>
+              <div class="add-carrinho">
+                <span class="btn-menos"><i class="fas fa-minus"></i></span>
+                <span class="add-numero-itens">0</span>
+                <span class="btn-mais"><i class="fa fa-plus"></i></span>
+                <span class="btn btn-remove"
+                  ><i class="fas fa-times"></i></span>
+              </div>
+            </div>
+
+          </div>
+          <div id="local-entrega" class="row mr-0 ml-0 hidden">
+            <div class="col-4">
+              <div class="form-group container-cep">
+                <label for="">CEP:</label>
+                <input id="txtCEP" type="text" class="form-control">
+                <a href="#" class="btn btn-yellow btn sm"><i class="fa fa-search"></i></a>
+              </div>
+            </div>
+            <div class="col-8"></div>
+            <div class="col-6">
+              <div class="form-group">
+                <label for="">Endereço:</label>
+                <input id="txtEndereco" type="text" class="form-control">
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-group">
+                <label for="">Bairro:</label>
+                <input id="txtBairro" type="text" class="form-control">
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="form-group">
+                <label for="">Número:</label>
+                <input id="txtNumero" type="text" class="form-control">
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="form-group">
+                <label for="">Cidade:</label>
+                <input id="txtCidade" type="text" class="form-control">
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-group">
+                <label for="">Complemento:</label>
+                <input id="txtComplemento" type="text" class="form-control">
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="form-group">
+                <label for="">UF:</label>
+                <select class="form-control" id="ddlUf">
+                  <option value="-1">...</option>
+                  <option value="AC">AC</option>
+                  <option value="AL">AL</option>
+                  <option value="AP">AP</option>
+                  <option value="AM">AM</option>
+                  <option value="BA">BA</option>
+                  <option value="CE">CE</option>
+                  <option value="DF">DF</option>
+                  <option value="ES">ES</option>
+                  <option value="GO">GO</option>
+                  <option value="MA">MA</option>
+                  <option value="MT">MT</option>
+                  <option value="MS">MS</option>
+                  <option value="MG">MG</option>
+                  <option value="PA">PA</option>
+                  <option value="PB">PB</option>
+                  <option value="PR">PR</option>
+                  <option value="PE">PE</option>
+                  <option value="PI">PI</option>
+                  <option value="RJ">RJ</option>
+                  <option value="RN">RN</option>
+                  <option value="RS">RS</option>
+                  <option value="RO">RO</option>
+                  <option value="RR">RR</option>
+                  <option value="SC">SC</option>
+                  <option value="SP">SP</option>
+                  <option value="SE">SE</option>
+                  <option value="TO">TO</option>
+                </select>
+              </div>
+            </div>
+
+
+
+
+          </div>
+          <div id="resumo-carrinho" class="row mr-0 ml-0 hidden ">
+            <div class="col-12">
+              <p class="title-carrinho mt-4">
+                <b>Itens do pedido</b>
+              </p>
+            </div>
+            <div class="col-12">
+              <div class="row" id="listaItemsResumo">
+                <div class="col-12 item-carrinho resumo">
+                  <div class="img-produto-resumo">
+                    <img src="img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg" alt="">
+                  </div>
+                  <div class="dados-produto">
+                    <p class="title-produto-resumo">
+                      <b>Nome produto</b>
+                    </p>
+                    <p class="price-produto-resumo">
+                      <b>R$ 100,00</b>
+                    </p>
+                  </div>
+                  <p class="quantidade-produto-resumo">
+                    x <b>3</b>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <p class="title-carrinho mt-4">
+                <b>Local da entrega</b>
+              </p>
+            </div>
+            <div class="col-12 item-carrinho resumo">
+              <div class="img-map">
+                <i class="fas fa-map-marked-alt"></i>
+              </div>
+              <div class="dados-produto">
+                <p class="texto-endereco">
+                  <b id="resumoEnedereco">Rua teste, 200,  bairro: teste</b>
+                </p>
+                <p class="cidade-endereco" id="cidadeEndereco">
+                  Cidade-SP / 000000-000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="container">
+          <div class="container-total text-right mb-0">
+            <p class="mb-0">
+              <span>Subtotal</span>
+              <span id="lblSubTotal">R$ 95,00</span>
+            </p>
+            <p class="mb-0 texto-entrega">
+              <span><i class="fas fa-motorcycle"></i> Entrega</span>
+              <span id="lblValorentrega"> + R$ 5,00</span>
+            </p>
+            <p class="mb-0 texto-total">
+              <span><b>Total: </b></span>
+              <span class="valor-total" id="lblValorTotal"><b>R$ 100,00</b></span>
+            </p>
+          </div>
+          <a href="#" class="btn btn-yellow float-right" id="btnEtapaPedido">Continuar</a>
+          <a href="#" class="btn btn-yellow float-right hidden" id="btnEtapaEndereco">Revisar pedido</a>
+          <a href="#" class="btn btn-yellow float-right hidden" id="btnEtapaResumo">Enviar pedido</a>
+          <a href="#" class="btn btn-white float-right hidden" id="btnVoltar">Voltar</a>
+        </div>
+      </div>
+    </div>
+
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/modernizr-3.5.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

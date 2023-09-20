@@ -26,6 +26,9 @@ html, body{
   font-family: 'PoppinsRegular', 'Rubik', 'sans-serif';
   color: var(--color-text);
 }
+.acitive{
+  background-color: var(--color-primary);
+}
 b{
   font-family: 'PoppinsMedium';
 }
@@ -293,7 +296,7 @@ a.navbar-brand{
   display: flex;
 }
 .card-item:hover .price-produto{
-  color: var(--color-black-heavy) !important;
+  color: var(--color-black-heavy) ;
   margin-top: 20px;
 }
 .depoimentos{
@@ -411,4 +414,213 @@ footer{
 }
 .container-redes-footer{
   justify-content: end;
+}
+.modal-full{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 50px;
+  background: var(--color-white);
+  z-index: 9990;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.modal-header{
+  padding-bottom: 20px;
+  background-color: transparent !important;
+  border-bottom: 1px solid transparent !important;
+}
+.modal-body{
+  flex: 1;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.modal-body::-webkit-scrollbar{
+  width: 6px;
+  background: transparent !important;
+}
+.modal-body::-webkit-scrollbar-thumb{
+  background: var(--color-white);
+}
+.modal-body::-webkit-scrollbar-track{
+  background: transparent !important;
+}
+.modal-footer{
+  border-top: 1px solid transparent !important;
+}
+.etapas{
+  display: flex;
+}
+.etapa{
+  width: 35px;
+  height: 35px;
+  background-color: var(--color-white);
+  border-radius: 50px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  color: var(--color-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+.etapa::before{
+  content: '';
+  width: 20px;
+  background-color: var(--color-separate);
+  position: absolute;
+  height: 2px;
+  margin-left: 55px;
+}
+.etapa:last-child::before{
+  content: none;
+}
+.etapa-active, .etapa.active::before{
+  background-color: var(--color-primary);
+}
+.title-carrinho{
+  font-size: 20px;
+  color: var(--color-black);
+}
+.modal-full .item-carrinho{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-separate);
+}
+.modal-full .item-carrinho:last-child{
+  border-bottom: none;
+}
+.modal-full .img-produto img{
+  width: 100px;
+  border-radius: 11px;
+}
+.modal-full .title-produto{
+  color: var(--color-black);
+  font-size: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.modal-full .price-produto {
+  color: var(--color-primary);
+  font-size: 30px;
+  margin-bottom: 0;
+}
+.modal-full .dados-produto{
+  flex: 1;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.modal-full .add-carrinho{
+  display: flex;
+  text-align: center;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.modal-full .add-numero-itens{
+  padding: 5px 15px;
+
+}
+.modal-full .btn-mais{
+  padding: 6.5px 7px;
+}
+.modal-full .btn-menos{
+  padding: 6.5px 7px;
+}
+.btn-remove{
+  border: 2px solid var(--color-red);
+  font-size: 16px;
+  padding: 4px 10px;
+  border-radius: 10px;
+  color: var(--color-white);
+  background-color: var(--color-red);
+  margin-left: 15px;
+}
+.container-total{
+  padding-top: 20px;
+  border-top: 1px solid var(--color-separate);
+}
+.container-total .texto-entrega{
+  color: var(--color-separate);
+}
+.container-total .texto-total{
+  color: var(--color-black);
+  font-size: 20px;
+  margin-top: 10px;
+}
+.container-total .valor-total{
+  color: var(--color-primary);
+  font-size: 24px;
+}
+.form-control{
+  background-color: var(--color-white);
+  color: var(--color-black) !important;
+  border-radius: 20px;
+  padding: 20px 25px;
+  font-size: 20px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1) !important;
+  /* border: none !important; */
+}
+select.form-control{
+  height:70px !important;
+}
+.container-cep .form-control{
+  padding-right: 95px;
+}
+.container-cep .btn{
+  position: absolute;
+  right: 25px;
+  top: 38px;
+}
+.img-produto-resumo img{
+  width: 50px;
+  border-radius: 11px;
+}
+.item-carrinho.resumo{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.title-produto-resumo{
+  color: var(--color-black);
+  font-size: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.price-produto-resumo{
+  color: var(--color-primary);
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.quantidade-produto-resumo{
+  color: var(--color-black);
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.img-map{
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-secondary);
+  color: var(--color-black);
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 11px;
+}
+.texto-endereco{
+  margin-bottom: 0;
+  color: var(--color-black);
+}
+.cidade-endereco{
+  margin-bottom: 0;
 }
