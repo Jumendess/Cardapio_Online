@@ -26,9 +26,7 @@ html, body{
   font-family: 'PoppinsRegular', 'Rubik', 'sans-serif';
   color: var(--color-text);
 }
-.acitive{
-  background-color: var(--color-primary);
-}
+
 b{
   font-family: 'PoppinsMedium';
 }
@@ -55,9 +53,10 @@ a.navbar-brand{
   box-shadow: 0px 10px 15px -3px rgb(0, 0, 0, 0.1);
 
 }
-.btn-white:hover{
-  background-color: var(--color-primary);
+.btn-white.active, .btn-white:hover{
+  background-color: var(--color-primary) ;
   color: var(--color-white) !important;
+
 }
 .btn-icon{
   padding-right: 75px;
@@ -623,4 +622,7 @@ select.form-control{
 }
 .cidade-endereco{
   margin-bottom: 0;
+}
+a{
+  cursor: pointer;
 }
