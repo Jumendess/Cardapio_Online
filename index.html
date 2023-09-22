@@ -4,12 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/fontawesome.css" />
 
     <link rel="stylesheet" href="css/style.css" />
     <title>Cardápio Online</title>
   </head>
   <body>
+    <div class="container-mensagens" id="container-mensagens"></div>
+    <a
+      class="botao-carrinho hidden"
+      onclick="cardapio.metodos.abrirCarrinho(true)"
+    >
+      <div class="bagde-total-carrinho">0</div>
+      <i class="fa fa-shopping-bag"></i>
+    </a>
     <!-- 1° -->
     <section class="header">
       <div class="container">
@@ -42,9 +51,17 @@
                 <a href="#depoimentos" class="nav-link"><b>Depoimentos</b></a>
               </li>
             </ul>
-            <a href="" class="btn btn-white btn-icon">
+            <a
+              class="btn btn-white btn-icon"
+              onclick="cardapio.metodos.abrirCarrinho(true)"
+            >
               Meu carrinho
               <span class="icon">
+                <div
+                  class="container-total-carrinho bagde-total-carrinho hidden"
+                >
+                  0
+                </div>
                 <i class="fa fa-shopping-bag"></i>
               </span>
             </a>
@@ -386,9 +403,14 @@
     <div class="modal-full hidden" id="modal-carrinho">
       <div class="modal-header">
         <div class="container">
-          <a href="#" class="btn btn-white btn-sm float-right">Fechar</a>
+          <a
+            href="#"
+            class="btn btn-white btn-sm float-right active"
+            onclick="cardapio.metodos.abrirCarrinho(false)"
+            >Fechar</a
+          >
           <div class="etapas">
-            <div class="etapa etapa1">1</div>
+            <div class="etapa active etapa1">1</div>
             <div class="etapa etapa2">2</div>
             <div class="etapa etapa3">3</div>
           </div>

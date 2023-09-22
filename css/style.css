@@ -239,6 +239,7 @@ a.navbar-brand{
   font-size: 24px;
 
 }
+
 .container-menu{
   margin-bottom: 40px;
 }
@@ -477,7 +478,7 @@ footer{
 .etapa:last-child::before{
   content: none;
 }
-.etapa-active, .etapa.active::before{
+.etapa.active, .etapa.active::before{
   background-color: var(--color-primary);
 }
 .title-carrinho{
@@ -625,4 +626,54 @@ select.form-control{
 }
 a{
   cursor: pointer;
+}
+.bagde-total-carrinho{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background-color: var(--color-secondary);
+  border-radius: 50px;
+  right: -5px;
+  top: -5px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.botao-carrinho{
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  height: 50px;
+  width: 50px;
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1);
+  color: var(--color-black-heavy) !important;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 1;
+}
+.container-mensagens{
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 9999;
+}
+.toast{
+  color: var(--color-white);
+  padding: 10px 25px;
+  font-size: 18px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+.toast.red{
+  background-color: var(--color-red);
+}
+.toast.green{
+  background-color: var(--color-freen);
 }
