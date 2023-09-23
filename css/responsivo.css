@@ -123,4 +123,30 @@
     margin-top: 40px;
     margin-bottom: 50px;
   }
+  .modal-full{
+    padding: 40px;
+  }
+  .modal-full .item-carrinho{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .modal-full .img-produto{
+    position: relative;
+    left: 0;
+  }
+  .modal-full .img-produto img{
+    width: 50px;
+  }
+  .modal-full .dados-produto{
+    padding-left: 15px;
+    padding-right: 15px;
+    display: grid;
+  }
+  .modal-full .title-produto,  .modal-full .price-produto{
+    font-size: 50px !important;
+  }
+  .modal-full .form-control {
+    font-size: 16px;
+  }
+
 }
