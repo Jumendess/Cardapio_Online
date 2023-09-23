@@ -2,12 +2,14 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/fontawesome.css" />
-
+    <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsivo.css" />
+
     <title>Cardápio Online</title>
   </head>
   <body>
@@ -22,22 +24,26 @@
     <!-- 1° -->
     <section class="header">
       <div class="container">
-        <nav class="navbar navbar-expand-lg pr-0">
-          <a class="navbar-brand">
+        <nav class="navbar navbar-expand-lg pl-0 pr-0 col-one">
+          <a class="navbar-brand wow fadeIn">
             <img src="img/logo.png" width="160" class="img-logo" alt="" />
           </a>
           <button
             class="navbar-toggler"
             type="button"
-            data-toggler=" collapse"
-            data-target="navBarDropdow"
+            data-toggle="collapse"
+            data-target="#navbarNavDropdown"
           >
             <span class="navbar-toggler-icon">
               <i class="fas fa-bars"></i>
             </span>
           </button>
-          <div class="collapse navbar-collapse" id="navBarDropdow">
-            <ul class="navbar-nav ml-auto mr-auto">
+          <div
+            class="collapse navbar-collapse"
+            type="button"
+            id="navbarNavDropdown"
+          >
+            <ul class="navbar-nav ml-auto mr-auto wow fadeIn">
               <li class="nav-item">
                 <a href="#reserva" class="nav-link"><b>Reserva</b></a>
               </li>
@@ -73,7 +79,7 @@
     <section class="banner">
       <div class="container">
         <div class="row">
-          <div class="col-6">
+          <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-one">
             <div class="d-flex text-banner">
               <h1>
                 <b>Escolha sua comida <b class="color-primary">favorita.</b></b>
@@ -84,7 +90,11 @@
               </p>
               <div>
                 <a class="btn btn-yellow mt-4 mr-3"> Ver cardápio </a>
-                <a href="#" class="btn btn-white btn-icon-left mt-4">
+                <a
+                  href="#"
+                  class="btn btn-white btn-icon-left mt-4"
+                  id="btnLigar"
+                >
                   <span class="icon-left">
                     <i class="fa fa-phone"></i>
                   </span>
@@ -102,7 +112,7 @@
               </a>
             </a>
           </div>
-          <div class="col-6">
+          <div class="col-6 no-mobile">
             <div class="card-banner"></div>
             <div class="d-flex img-banner">
               <img src="img/burguer.png" alt="" />
@@ -124,13 +134,13 @@
       <div class="background-servicos"></div>
       <div class="container">
         <div class="row">
-          <div class="col-12 text-center mb-5">
+          <div class="col-12 col-one text-center mb-5">
             <span class="hint-title"><b>Serviços</b></span>
             <h1 class="title">
               <b>Como são os nossos Serviços</b>
             </h1>
           </div>
-          <div class="col-4 mb-5">
+          <div class="col-12 col-lg-4 col-md-4 col-sm-12 col-one mb-5">
             <div class="card-icon text-center">
               <img src="img/icone-pedido.svg" width="150px" alt="" />
             </div>
@@ -141,7 +151,7 @@
               >
             </div>
           </div>
-          <div class="col-4 mb-5">
+          <div class="col-12 col-lg-4 col-md-4 col-sm-12 col-one mb-5">
             <div class="card-icon text-center">
               <img src="img/icone-delivery.svg" width="250px" alt="" />
             </div>
@@ -153,7 +163,7 @@
               >
             </div>
           </div>
-          <div class="col-4 mb-5">
+          <div class="col-12 col-lg-4 col-md-4 col-sm-12 col-one mb-5">
             <div class="card-icon text-center">
               <img src="img/icone-qualidade.svg" width="250px" alt="" />
             </div>
@@ -173,13 +183,13 @@
       <div class="background-cardapio"></div>
       <div class="container">
         <div class="row">
-          <div class="col-12 text-center mb-5">
+          <div class="col-12 col-one text-center mb-5">
             <span class="hint-title"><b>Cardápio</b></span>
             <h1 class="title">
               <b>Conheça o nosso cardápio</b>
             </h1>
           </div>
-          <div class="col-12 container-menu">
+          <div class="col-12 col-one container-menu">
             <a
               id="menu-burgers"
               class="btn-white active btn-sm mr-3"
@@ -224,10 +234,10 @@
             </a>
           </div>
 
-          <div class="col-12">
+          <div class="col-12 col-one">
             <div class="row" id="itensCardapio"></div>
           </div>
-          <div class="col-12 text-center">
+          <div class="col-12 col-one text-center">
             <a
               id="btnVerMais"
               class="btn btn-white btn-sm"
@@ -244,13 +254,13 @@
       <div class="background-depoimentos"></div>
       <div class="container">
         <div class="row">
-          <div class="col-5 text-center">
+          <div class="col-5 no-mobile text-center">
             <div class="card-depoimentos"></div>
             <div class="d-flex img-banner">
               <img src="img/pizzas.png " alt="Pizzas" />
             </div>
           </div>
-          <div class="col-7">
+          <div class="col-12 col-lg-7 col-md-7 col-sm-12 col-one">
             <span class="hint-title"><b>Depoimentos</b></span>
             <h1 class="title">
               <b>O que dizem sobre nós?</b>
@@ -333,9 +343,24 @@
                 </p>
               </div>
             </div>
-            <a href="#" class="btn btn-sm btn-white btn-social mr-3">1</a>
-            <a href="#" class="btn btn-sm btn-white btn-social mr-3">2</a>
-            <a href="#" class="btn btn-sm btn-white btn-social">3</a>
+            <a
+              id="btnDepoimento-1"
+              class="btn btn-sm btn-white btn-social mr-3"
+              onclick="cardapio.metodos.abrirDepoimento(1)"
+              >1</a
+            >
+            <a
+              id="btnDepoimento-2"
+              class="btn btn-sm btn-white btn-social mr-3"
+              onclick="cardapio.metodos.abrirDepoimento(2)"
+              >2</a
+            >
+            <a
+              id="btnDepoimento-3"
+              class="btn btn-sm btn-white btn-social"
+              onclick="cardapio.metodos.abrirDepoimento(3)"
+              >3</a
+            >
           </div>
         </div>
       </div>
@@ -344,10 +369,10 @@
     <section class="reserva" id="reserva">
       <div class="container">
         <div class="row">
-          <div class="col-12">
+          <div class="col-12 col-one">
             <div class="card-secondary">
               <div class="row">
-                <div class="col-7">
+                <div class="col-12 col-lg-7 col-md-7 col-sm-12 col-one">
                   <span class="hint-title"><b>Reserva</b></span>
                   <h1 class="title">
                     <b
@@ -360,9 +385,16 @@
                     <br />
                     Reserve sua data e horário de forma simples e rápida.
                   </p>
-                  <a href="#" class="btn btn-yellow mt-4"> Fazer reserva</a>
+                  <a
+                    href="#"
+                    id="btnReserva"
+                    target="_blank"
+                    class="btn btn-yellow mt-4"
+                  >
+                    Fazer reserva</a
+                  >
                 </div>
-                <div class="col-5">
+                <div class="col-5 no-mobile">
                   <div class="card-reserva"></div>
                   <div class="d-flex img-banner">
                     <img src="img/icone-reserva.svg" alt="" />
@@ -377,15 +409,23 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-3 container-logo-footer">
+          <div
+            class="col-12 col-lg-3 col-md-3 col-sm-12 col-one container-logo-footer"
+          >
             <img src="img/logo.png" class="logo-footer" />
           </div>
-          <div class="col-6 container-texto-footer">
+
+          <div
+            class="col-12 col-lg-3 col-md-3 col-sm-12 col-one container-texto-footer"
+          >
             <p class="mb-0">
               <b>Menu On-line</b> &copy; Todos direitos reservados
             </p>
           </div>
-          <div class="col-3 container-redes-footer">
+
+          <div
+            class="col-12 col-lg-6 col-md-6 col-sm-12 col-one container-redes-footer"
+          >
             <a href="#" class="btn btn-sm btn-white btn-social mr-3">
               <i class="fab fa-instagram"></i>
             </a>
@@ -421,34 +461,15 @@
       </div>
       <div class="modal-body">
         <div class="container">
-          <div id="items-carrinho " class="row mr-0 ml-0">
-            <div class="col-12 item-carrinho">
-              <div class="img-produto">
-                <img
-                  src="img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="dados-produto">
-                <p class="title-produto"></p>
-                <b>Nome do produto</b>
-                <p class="price-produto"></p>
-                <b>R$ 154,90</b>
-              </div>
-              <div class="add-carrinho">
-                <span class="btn-menos"><i class="fas fa-minus"></i></span>
-                <span class="add-numero-itens">0</span>
-                <span class="btn-mais"><i class="fa fa-plus"></i></span>
-                <span class="btn btn-remove"><i class="fas fa-times"></i></span>
-              </div>
-            </div>
-          </div>
+          <div id="items-carrinho" class="row mr-0 ml-0 hidden"></div>
           <div id="local-entrega" class="row mr-0 ml-0 hidden">
             <div class="col-4">
               <div class="form-group container-cep">
                 <label for="">CEP:</label>
                 <input id="txtCEP" type="text" class="form-control" />
-                <a href="#" class="btn btn-yellow btn sm"
+                <a
+                  class="btn btn-yellow btn sm"
+                  onclick="cardapio.metodos.buscarCEP()"
                   ><i class="fa fa-search"></i
                 ></a>
               </div>
@@ -522,48 +543,28 @@
             </div>
           </div>
           <div id="resumo-carrinho" class="row mr-0 ml-0 hidden">
-            <div class="col-12">
+            <div class="col-12 col-one">
               <p class="title-carrinho mt-4">
                 <b>Itens do pedido</b>
               </p>
             </div>
-            <div class="col-12">
-              <div class="row" id="listaItemsResumo">
-                <div class="col-12 item-carrinho resumo">
-                  <div class="img-produto-resumo">
-                    <img
-                      src="img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="dados-produto">
-                    <p class="title-produto-resumo">
-                      <b>Nome produto</b>
-                    </p>
-                    <p class="price-produto-resumo">
-                      <b>R$ 100,00</b>
-                    </p>
-                  </div>
-                  <p class="quantidade-produto-resumo">x <b>3</b></p>
-                </div>
-              </div>
+            <div class="col-12 col-one">
+              <div class="row" id="listaItemsResumo"></div>
             </div>
-            <div class="col-12">
+            <div class="col-12 col-one">
               <p class="title-carrinho mt-4">
                 <b>Local da entrega</b>
               </p>
             </div>
-            <div class="col-12 item-carrinho resumo">
+            <div class="col-12 col-one item-carrinho resumo">
               <div class="img-map">
                 <i class="fas fa-map-marked-alt"></i>
               </div>
               <div class="dados-produto">
                 <p class="texto-endereco">
-                  <b id="resumoEnedereco">Rua teste, 200, bairro: teste</b>
+                  <b id="resumoEnedereco"></b>
                 </p>
-                <p class="cidade-endereco" id="cidadeEndereco">
-                  Cidade-SP / 000000-000
-                </p>
+                <p class="cidade-endereco" id="cidadeEndereco"></p>
               </div>
             </div>
           </div>
@@ -574,24 +575,25 @@
           <div class="container-total text-right mb-0">
             <p class="mb-0">
               <span>Subtotal</span>
-              <span id="lblSubTotal">R$ 95,00</span>
+              <span id="lblSubTotal">R$ 0,00</span>
             </p>
             <p class="mb-0 texto-entrega">
               <span><i class="fas fa-motorcycle"></i> Entrega</span>
-              <span id="lblValorentrega"> + R$ 5,00</span>
+              <span id="lblValorEntrega"> + R$ 0,00</span>
             </p>
             <p class="mb-0 texto-total">
               <span><b>Total: </b></span>
-              <span class="valor-total" id="lblValorTotal"
-                ><b>R$ 100,00</b></span
-              >
+              <span class="valor-total"><b id="lblValorTotal">R$ 0,00</b></span>
             </p>
           </div>
-          <a href="#" class="btn btn-yellow float-right" id="btnEtapaPedido"
+          <a
+            onclick="cardapio.metodos.carregarEndereco()"
+            class="btn btn-yellow float-right"
+            id="btnEtapaPedido"
             >Continuar</a
           >
           <a
-            href="#"
+            onclick="cardapio.metodos.resumoPedido()"
             class="btn btn-yellow float-right hidden"
             id="btnEtapaEndereco"
             >Revisar pedido</a
@@ -599,10 +601,14 @@
           <a
             href="#"
             class="btn btn-yellow float-right hidden"
+            target="_blank"
             id="btnEtapaResumo"
             >Enviar pedido</a
           >
-          <a href="#" class="btn btn-white float-right hidden" id="btnVoltar"
+          <a
+            onclick="cardapio.metodos.voltarEtapa()"
+            class="btn btn-white float-right hidden"
+            id="btnVoltar"
             >Voltar</a
           >
         </div>
