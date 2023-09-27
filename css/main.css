@@ -9,12 +9,12 @@
 }
 
 :root {
-    --color-background: #fffdf7;
+    --color-background: #C7FFED;
     --color-black: #212121;
     --color-black-heavy: #000000;
     --color-text: #4f4f4f;
     --color-text-out: #90908e;
-    --color-primary: #ffbf00;
+    --color-primary: #008F8C;
     --color-secondary: #fff2cc;
     --color-white: #ffffff;
     --color-red: #e74c3c;
@@ -201,7 +201,7 @@ a.navbar-brand {
     margin-bottom: 30px;
 }
 
-.card-icon {   
+.card-icon {
     height: 150px;
     margin: 0 auto;
     margin-bottom: 30px;
